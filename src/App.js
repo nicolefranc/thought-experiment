@@ -60,8 +60,8 @@ function App() {
     <div className="App flex flex-col justify-center">
       <div className="max-w-screen-lg px-10">
         <section id="intro" className="px-5 py-10 min-h-screen flex flex-col justify-center">
-          <h1 className="text-left text-3xl md:text-6xl font-bold tracking-wide">Would you do the same?</h1>
-          <h2 className="mt-2 md:mt-4 text-left md:text-center md:text-xl">A thought experiment for 02.113TS Laboratory of the Mind</h2>
+          <h1 className="text-left text-5xl md:text-6xl font-bold tracking-wide">Would you do the same?</h1>
+          <h2 className="mt-2 md:mt-4 text-left md:text-center text-xl leading-relaxed">A thought experiment for 02.113TS Laboratory of the Mind</h2>
         </section>
         {/* Scenario 1 */}
         <section id="scenario1" className="px-5 py-10 min-h-screen flex flex-col justify-center">
@@ -75,15 +75,15 @@ function App() {
           <div id="scenario1-choices">
             <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
               <a href="#scenario2">
-                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 0 && "bg-green-600 text-white"}`}
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 0 && "bg-green-600 text-white"}`}
                   onClick={() => setS1(0)}>
                     Do nothing and hope for the best.
                 </button>
               </a>
               <a href="#scenario2">
-                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 1 && "bg-green-600 text-white"}`}
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 1 && "bg-green-600 text-white"}`}
                   onClick={() => setS1(1)}>
-                  Expedite their death through medical means.
+                  Expedite their death through medical intervention.
                 </button>
               </a>
             </div>
@@ -102,14 +102,14 @@ function App() {
           <div id="scenario2-choices">
             <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
               <a href="#superiority-qn">
-                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 0 && "bg-green-600 text-white"}`}
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 0 && "bg-green-600 text-white"}`}
                   onClick={() => setS2(0)}>
                   Do nothing and hope for the best.
                 </button>
               </a>
               <a href="#superiority-qn">
-                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 1 && "bg-green-600 text-white"}`}
-                  onClick={() => setS2(1)}>Expedite their death through medical means.
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 1 && "bg-green-600 text-white"}`}
+                  onClick={() => setS2(1)}>Expedite their death through medical intervention.
                 </button>
               </a>
             </div>
@@ -129,13 +129,13 @@ function App() {
           <div id="superiority-choices">
             <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
               <a href="#scenario3">
-                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 0 && "bg-green-600 text-white"}`}
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 0 && "bg-green-600 text-white"}`}
                   onClick={() => setSuperior(0)}>
                   Yes, humans are superior.
                 </button>
               </a>
               <a href="#scenario3">
-                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 1 && "bg-green-600 text-white"}`}
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 1 && "bg-green-600 text-white"}`}
                 onClick={() => setSuperior(1)}>
                   No, humans are not superior.
                 </button>
@@ -154,16 +154,16 @@ function App() {
           </div>
 
           <div id="scenario3-choices">
-            <div className="py-10 flex items-start justify-evenly">
+            <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
               <a href="#final-analysis">
-                <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 0 && "bg-green-600 text-white"}`}
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 0 && "bg-green-600 text-white"}`}
                     onClick={() => setS3(0)}>
-                  Make do with what you have<br/>and continue to ration.</button>
+                  Make do with what you have and continue to ration.</button>
               </a>
               <a href="#final-analysis">
-                <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 1 && "bg-green-600 text-white"}`}
+                <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 1 && "bg-green-600 text-white"}`}
                     onClick={() => setS3(1)}>
-                  Eliminate a few of your villagers<br/>to increase ration.</button>
+                  Eliminate a few of your villagers to increase ration.</button>
               </a>
             </div>
           </div>
