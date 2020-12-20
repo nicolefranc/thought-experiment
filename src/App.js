@@ -68,13 +68,13 @@ function App() {
 
           <div id="scenario1-choices">
             <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
-              <a href="#scenario2">
+              <a href="#wydts-qn">
                 <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 0 && "bg-green-600 text-white"}`}
                   onClick={() => setS1(0)}>
                     Do nothing and hope for the best.
                 </button>
               </a>
-              <a href="#scenario2">
+              <a href="#wydts-qn">
                 <button className={`m-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 1 && "bg-green-600 text-white"}`}
                   onClick={() => setS1(1)}>
                   Expedite their death through medical intervention.
@@ -83,6 +83,18 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* Prompt */}
+        <section id="wydts-qn" className="px-5 py-10 min-h-screen flex flex-col justify-center items-center">
+          <p className="text-xl text-center leading-loose tracking-wide">
+            Now, what if the character in the previous scenario was an animal.
+          </p>
+          <h1 className="mb-5 font-bold text-4xl text-center tracking-wide">Would you have done the same?</h1>
+          <a href="#scenario2">
+            <button className="mt-5 w-40 p-3 shadow-md text-gray-900 hover:text-white hover:bg-green-600 font-semibold tracking-wide uppercase rounded-full">Proceed</button>
+          </a>
+        </section>
+        
 
         {/* Scenario 2 */}
         <section id="scenario2" className="px-5 py-10 min-h-screen flex flex-col justify-center">
@@ -116,7 +128,7 @@ function App() {
           <div>
             <h1 className="mb-5 font-bold text-4xl text-left tracking-wide">Superiority</h1>
             <p className="text-xl text-left leading-loose tracking-wide">
-              Do you think humans are superior over other beings such as animals, giving us power over them?
+              Do you think humans are superior over other beings, such as animals; giving us power over them?
             </p>
           </div>
 
@@ -174,7 +186,7 @@ function App() {
                 </p>
                 <br/>
                 <p className="text-xl text-left leading-loose tracking-wide">
-                  This activity has determined you should think that:
+                  This activity has determined that you should think that:
                 </p>
                 <ul className="pl-4 text-2xl text-left leading-loose tracking-wide">
                   <li>&mdash;&nbsp;Animal euthanasia is&nbsp;
