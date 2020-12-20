@@ -57,110 +57,132 @@ function App() {
 
 
   return (
-    <div className="App flex justify-center">
+    <div className="App flex flex-col justify-center">
       <div className="max-w-screen-lg px-10">
-        <section id="intro">
-
+        <section id="intro" className="px-5 py-10 min-h-screen flex flex-col justify-center">
+          <h1 className="text-left text-3xl md:text-6xl font-bold tracking-wide">Would you do the same?</h1>
+          <h2 className="mt-2 md:mt-4 text-left md:text-center md:text-xl">A thought experiment for 02.113TS Laboratory of the Mind</h2>
         </section>
         {/* Scenario 1 */}
-        <section id="scenario1" className="px-5 py-10 bg-gray-200 min-h-screen flex flex-col justify-center">
+        <section id="scenario1" className="px-5 py-10 min-h-screen flex flex-col justify-center">
           <div>
-            <h1 className="font-bold text-xl tracking-wide">Scenario 1</h1>
-            <p className="text-lg">
+            <h1 className="mb-5 font-bold text-4xl text-left tracking-wide">Scenario 1</h1>
+            <p className="text-xl text-left leading-loose tracking-wide">
               The person you love most got into a serious accident. They arrived in the hospital alive, awake and receptive of everything around them. However, as a result of the accident, they can no longer communicate by any means at all. The doctor says that treating them will cause so much financial burden and the likelihood of the treatment to be successful is very low. The doctor suggests to hasten your loved one’s death through medical intervention as their quality of life will never be the same. However, you don’t know what your loved one would prefer.
             </p>
           </div>
 
           <div id="scenario1-choices">
-            <div className="py-10 flex items-start justify-evenly">
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 0 && "bg-green-600 text-white"}`}
-                onClick={() => setS1(0)}>
-                Do nothing and hope for the best.</button>
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 1 && "bg-green-600 text-white"}`}
-                onClick={() => setS1(1)}>
-                Expedite their death through medical means.</button>
+            <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
+              <a href="#scenario2">
+                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 0 && "bg-green-600 text-white"}`}
+                  onClick={() => setS1(0)}>
+                    Do nothing and hope for the best.
+                </button>
+              </a>
+              <a href="#scenario2">
+                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 1 && "bg-green-600 text-white"}`}
+                  onClick={() => setS1(1)}>
+                  Expedite their death through medical means.
+                </button>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Scenario 2 */}
-        <section id="scenario2" className="px-5 py-10 bg-gray-300 min-h-screen flex flex-col justify-center">
+        <section id="scenario2" className="px-5 py-10 min-h-screen flex flex-col justify-center">
           <div>
-            <h1 className="font-bold text-xl tracking-wide">Scenario 2</h1>
-            <p className="text-lg">
+            <h1 className="mb-5 font-bold text-4xl text-left tracking-wide">Scenario 2</h1>
+            <p className="text-xl text-left leading-loose tracking-wide">
               Your beloved pet got into an accident. You brought it to the vet. The veterinarian tells you that treating your pet will cause so much financial burden and the likelihood of the treatment to be successful is very low. The veterinarian suggests to hasten your pet’s death through medical intervention as their quality of life will never be the same.
             </p>
           </div>
 
           <div id="scenario2-choices">
             <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 0 && "bg-green-600 text-white"}`}
-                onClick={() => setS2(0)}>
-                Do nothing and hope for the best.</button>
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 1 && "bg-green-600 text-white"}`}
-                onClick={() => setS2(1)}>
-               Expedite their death through medical means.</button>
+              <a href="#superiority-qn">
+                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 0 && "bg-green-600 text-white"}`}
+                  onClick={() => setS2(0)}>
+                  Do nothing and hope for the best.
+                </button>
+              </a>
+              <a href="#superiority-qn">
+                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 1 && "bg-green-600 text-white"}`}
+                  onClick={() => setS2(1)}>Expedite their death through medical means.
+                </button>
+              </a>
             </div>
           </div>
         </section>
         
 
         {/* Superiority Qn */}
-        <section id="superiority-qn" className="px-5 py-10 bg-gray-400 min-h-screen flex flex-col justify-center">
+        <section id="superiority-qn" className="px-5 py-10 min-h-screen flex flex-col justify-center">
           <div>
-            <h1 className="font-bold text-xl tracking-wide">Superiority</h1>
-            <p className="text-lg">
+            <h1 className="mb-5 font-bold text-4xl text-left tracking-wide">Superiority</h1>
+            <p className="text-xl text-left leading-loose tracking-wide">
               Do you think humans are superior over other beings such as animals, giving us power over them?
             </p>
           </div>
 
           <div id="superiority-choices">
-            <div className="py-10 flex items-start justify-evenly">
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 0 && "bg-green-600 text-white"}`}
-                onClick={() => setSuperior(0)}>
-               Yes, humans are superior.</button>
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 1 && "bg-green-600 text-white"}`}
+            <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
+              <a href="#scenario3">
+                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 0 && "bg-green-600 text-white"}`}
+                  onClick={() => setSuperior(0)}>
+                  Yes, humans are superior.
+                </button>
+              </a>
+              <a href="#scenario3">
+                <button className={`my-2 p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 1 && "bg-green-600 text-white"}`}
                 onClick={() => setSuperior(1)}>
-               No, humans are not superior.</button>
+                  No, humans are not superior.
+                </button>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Scenario 3 */}
-        <section id="scenario3" className="px-5 py-10 bg-gray-500 min-h-screen flex flex-col justify-center">
+        <section id="scenario3" className="px-5 py-10 min-h-screen flex flex-col justify-center">
           <div>
-            <h1 className="font-bold text-xl tracking-wide">Scenario 3</h1>
-            <p className="text-lg">
+            <h1 className="mb-5 font-bold text-4xl text-left tracking-wide">Scenario 3</h1>
+            <p className="text-xl text-left leading-loose tracking-wide">
               It is the year 2075. The world suffers from overpopulation. Resources have become scarce; no longer enough to sustain the entire population. You are the leader of your small village. The government can only spare a very limited amount of food that is obviously not enough to feed your whole village. As such, you are left with this impossible decision:
             </p>
           </div>
 
           <div id="scenario3-choices">
             <div className="py-10 flex items-start justify-evenly">
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 0 && "bg-green-600 text-white"}`}
-                  onClick={() => setS3(0)}>
-                Make do with what you have<br/>and continue to ration.</button>
-              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 1 && "bg-green-600 text-white"}`}
-                  onClick={() => setS3(1)}>
-                Eliminate a few of your villagers<br/>to increase ration.</button>
+              <a href="#final-analysis">
+                <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 0 && "bg-green-600 text-white"}`}
+                    onClick={() => setS3(0)}>
+                  Make do with what you have<br/>and continue to ration.</button>
+              </a>
+              <a href="#final-analysis">
+                <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 1 && "bg-green-600 text-white"}`}
+                    onClick={() => setS3(1)}>
+                  Eliminate a few of your villagers<br/>to increase ration.</button>
+              </a>
             </div>
           </div>
         </section>
 
         {(s1 !== null && s2 !== null && superior !== null && s3 !== null) &&
-          (<section id="final-analysis" className="px-5 py-10 bg-gray-500 min-h-screen flex flex-col justify-center text-left">
+          (<section id="final-analysis" className="px-5 py-10 min-h-screen flex flex-col justify-center text-left">
             {/* Conclusion */}
             <div id="conclusion" className="py-10">
               <div>
-                <h1 className="font-bold text-xl tracking-wide">Conclusion</h1>
-                <p className="text-lg">
+                <h1 className="mb-5 font-bold text-4xl text-left tracking-wide">Conclusion</h1>
+                <p className="text-xl text-left leading-loose tracking-wide">
                   As you may have realised, this activity tries to explore the morality of animal euthanasia and whether animal life is as important as human life. The scenarios and questions are specifically crafted to indirectly figure out your moral status regarding the subjects above.
                 </p>
                 <br/>
-                <p className="text-lg">
+                <p className="text-xl text-left leading-loose tracking-wide">
                   This activity has determined you should think that:
                 </p>
-                <ul className="pl-4 text-lg">
+                <ul className="pl-4 text-xl text-left leading-loose tracking-wide">
                   <li>&mdash;&nbsp;Animal euthanasia is&nbsp;
                     <span className="underline">{getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).isJustified}</span>
                     .
@@ -176,8 +198,8 @@ function App() {
             {/* Analysis */}
             <div id="analysis" className="py-10">
               <div>
-                <h1 className="font-bold text-xl tracking-wide">Explanation</h1>
-                <p className="text-lg">
+                <h1 className="mb-5 font-bold text-4xl text-left tracking-wide">Explanation</h1>
+                <p className="text-xl text-left leading-loose tracking-wide">
                   The first and second scenario aims to identify two things:<br/>
                   &nbsp;&nbsp;(1) Will you decide for the Being to continue living despite the fact that the Being will die eventually?<br/>
                   &nbsp;&nbsp;(2) Do you hold both lives to the same level of regard?
@@ -187,7 +209,7 @@ function App() {
                   In the last scenario, what is being explored is the extent to which you find it morally permissible to expedite death. Translating the scenario to the morality of animal euthanasia, the village in the scenario is an underfunded animal shelter with too many animals (villagers) to care for. These shelters are usually left to decide on euthanizing the animals.
                 </p>
                 <br/>
-                <p className="text-lg">
+                <p className="text-xl text-left leading-loose tracking-wide">
                   Now analysing your response:<br/>
                   {console.log(getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).analysis)}
                   {getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).analysis}
@@ -197,10 +219,15 @@ function App() {
 
           </section>)
         }
+
       </div>
+      <footer className="mt-40 py-8 bg-green-600">
+        <div className="max-w-screen-lg">
+          A thought experiment by Nicole Yu.
+        </div>
+      </footer>
     </div>
   );
-
 }
 
 export default App;
