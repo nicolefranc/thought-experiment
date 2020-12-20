@@ -49,15 +49,9 @@ function App() {
         return
     }
   }
-  
-  console.log("s1: " + s1);
-  console.log("s2: " + s2);
-  console.log("superior: " + superior);
-  console.log("s3: " + s3);
-
 
   return (
-    <div className="App flex flex-col justify-center">
+    <div className="App flex flex-col items-center">
       <div className="max-w-screen-lg px-10">
         <section id="intro" className="px-5 py-10 min-h-screen flex flex-col justify-center">
           <h1 className="text-left text-5xl md:text-6xl font-bold tracking-wide">Would you do the same?</h1>
@@ -182,13 +176,13 @@ function App() {
                 <p className="text-xl text-left leading-loose tracking-wide">
                   This activity has determined you should think that:
                 </p>
-                <ul className="pl-4 text-xl text-left leading-loose tracking-wide">
+                <ul className="pl-4 text-2xl text-left leading-loose tracking-wide">
                   <li>&mdash;&nbsp;Animal euthanasia is&nbsp;
-                    <span className="underline">{getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).isJustified}</span>
+                    <span className="font-semibold underline">{getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).isJustified}</span>
                     .
                   </li>
                   <li>&mdash;&nbsp;Animal and human lives&nbsp; 
-                    <span className="underline">{getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).isEqual}</span>
+                    <span className="font-semibold underline">{getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).isEqual}</span>
                     &nbsp;seen as equivalent.
                   </li>
                 </ul>
@@ -210,8 +204,7 @@ function App() {
                 </p>
                 <br/>
                 <p className="text-xl text-left leading-loose tracking-wide">
-                  Now analysing your response:<br/>
-                  {console.log(getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).analysis)}
+                  Now, based on your responses:<br/>
                   {getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).analysis}
                 </p>
               </div>
@@ -221,9 +214,9 @@ function App() {
         }
 
       </div>
-      <footer className="mt-40 py-8 bg-green-600">
-        <div className="max-w-screen-lg">
-          A thought experiment by Nicole Yu.
+      <footer className="mt-40 py-8 text-gray-600">
+        <div className="">
+          A thought experiment by <a href="https://github.com/nicolefranc/" target="_blank" rel="noreferrer">Nicole Yu</a>
         </div>
       </footer>
     </div>
