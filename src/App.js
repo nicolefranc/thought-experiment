@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './index.css';
 import './App.css';
 import data from './analysis.json';
@@ -9,7 +8,6 @@ function App() {
   const [s2, setS2] = useState(null);
   const [superior, setSuperior] = useState(null);
   const [s3, setS3] = useState(null); 
-  const [id, setId] = useState(null);
 
   
 
@@ -47,6 +45,8 @@ function App() {
         return data["1010"];
       case "1011":
         return data["1011"];
+      default:
+        return
     }
   }
 
