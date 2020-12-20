@@ -193,6 +193,7 @@ function App() {
                 <br/>
                 <p className="text-lg">
                   Now analysing your response:<br/>
+                  {console.log(getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).analysis)}
                   {getData(s1.toString()+s2.toString()+superior.toString()+s3.toString()).analysis}
                 </p>
               </div>
