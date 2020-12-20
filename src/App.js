@@ -49,15 +49,11 @@ function App() {
         return
     }
   }
-
-  // if (s1, s2, superior, s3 !== null) 
-  //   setId(s1.toString().concat(s2.toString()).concat(superior.toString()).concat(s3.toString()));
-
+  
   console.log("s1: " + s1);
   console.log("s2: " + s2);
   console.log("superior: " + superior);
   console.log("s3: " + s3);
-  console.log("id: " + id);
 
 
   return (
@@ -77,10 +73,10 @@ function App() {
 
           <div id="scenario1-choices">
             <div className="py-10 flex items-start justify-evenly">
-              <button className={`choices ${s1 === 0 && "selected"}`}
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 0 && "bg-green-600 text-white"}`}
                 onClick={() => setS1(0)}>
                 Do nothing and hope for the best.</button>
-              <button className={`choices ${s1 === 1 && "selected"}`}
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s1 === 1 && "bg-green-600 text-white"}`}
                 onClick={() => setS1(1)}>
                 Expedite their death through medical means.</button>
             </div>
@@ -97,11 +93,11 @@ function App() {
           </div>
 
           <div id="scenario2-choices">
-            <div className="btn-container flex-col md:flex-row">
-              <button className={`choices ${s2 === 0 && "selected"}`}
+            <div className="py-10 flex items-start justify-evenly flex-col md:flex-row">
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 0 && "bg-green-600 text-white"}`}
                 onClick={() => setS2(0)}>
                 Do nothing and hope for the best.</button>
-              <button className={`choices ${s2 === 1 && "selected"}`}
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s2 === 1 && "bg-green-600 text-white"}`}
                 onClick={() => setS2(1)}>
                Expedite their death through medical means.</button>
             </div>
@@ -120,10 +116,10 @@ function App() {
 
           <div id="superiority-choices">
             <div className="py-10 flex items-start justify-evenly">
-              <button className={`choices ${superior === 0 && "selected"}`}
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 0 && "bg-green-600 text-white"}`}
                 onClick={() => setSuperior(0)}>
                Yes, humans are superior.</button>
-              <button className={`choices ${superior === 1 && "selected"}`}
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${superior === 1 && "bg-green-600 text-white"}`}
                 onClick={() => setSuperior(1)}>
                No, humans are not superior.</button>
             </div>
@@ -141,10 +137,10 @@ function App() {
 
           <div id="scenario3-choices">
             <div className="py-10 flex items-start justify-evenly">
-              <button className={`choices ${s3 === 0 && "selected"}`}
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 0 && "bg-green-600 text-white"}`}
                   onClick={() => setS3(0)}>
                 Make do with what you have<br/>and continue to ration.</button>
-              <button className={`choices ${s3 === 1 && "selected"}`}
+              <button className={`p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full ${s3 === 1 && "bg-green-600 text-white"}`}
                   onClick={() => setS3(1)}>
                 Eliminate a few of your villagers<br/>to increase ration.</button>
             </div>

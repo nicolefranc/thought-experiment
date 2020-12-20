@@ -16,15 +16,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.btn-container {
-  @apply py-10 flex items-start justify-evenly
-}
-
-.selected {
-  @apply bg-green-600 text-white
-}
-
-.choices {
-  @apply p-5 border-2 border-green-600 font-semibold tracking-wide uppercase rounded-full
-}
